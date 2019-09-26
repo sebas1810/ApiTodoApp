@@ -36,8 +36,8 @@ namespace TodoApp.API
 
             services.AddDbContext<TodoAppContext>(options => options.UseSqlServer(Configuration.GetConnectionString("AppContext")));
 
-            services.AddScoped<ITODORepository, ToDoRepository>(); //cambiaria el nombre TODO a ToDo en Entidad, interfaces y repos
-                                                                   //services.AddScoped<IUOWRepository, UOWRepository>(); //me gustaria implementar UOW como un repo
+            services.AddScoped<ITODORepository, ToDoRepository>(); 
+                                                                   //services.AddScoped<IUOWRepository, UOWRepository>(); //I would like to look on the implementation of an UOW as repository
             services.AddScoped<ITODOService, TODOService>();
 
             services.AddSwaggerGen(c =>
