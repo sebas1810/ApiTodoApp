@@ -16,12 +16,12 @@ namespace TodoApp.Infrastructure.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Status>().HasData(
-                new Status { Id = 1, Name = "Pendiente" },
-                new Status { Id = 2, Name = "Resuelta" });
+                new Status { Id = 1, Name = "Pending" },
+                new Status { Id = 2, Name = "Done" });
 
             modelBuilder.Entity<TODO>().HasData(
-                new TODO { Id = 1, Description = "Tarea uno", StatusId = 1 },
-                new TODO { Id = 2, Description = "Tarea dos", StatusId = 1 });
+                new TODO { Id = 1, Description = "Task One", StatusId = 1 },
+                new TODO { Id = 2, Description = "Task Two", StatusId = 1 });
 
             base.OnModelCreating(modelBuilder);
         }
